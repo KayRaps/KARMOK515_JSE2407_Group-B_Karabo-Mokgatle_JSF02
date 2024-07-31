@@ -30,6 +30,26 @@
   </script>
   
   <style>
+  .controls-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 1rem 0; /* Add some margin */
+    padding: 1rem 2rem; /* Add padding */
+    border: 2px solid #090808; /* Add border */
+    background-color: #f0f0f0; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+  }
+
+  .select-dropdown {
+    margin: 0 1rem; /* Spacing between dropdowns */
+    padding: 0.5rem 1rem; /* Padding inside the dropdown */
+    border: 1px solid #ccc; /* Border for dropdown */
+    border-radius: 4px; /* Rounded corners for dropdown */
+    background-color: #fff; /* Background color for dropdown */
+    cursor: pointer;
+  }
+
      .product-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -45,6 +65,7 @@
     }
   </style>
   
+  <div class="controls-container">
   <select on:change={handleCategoryChange}>
     <option value=''>All Categories</option>
     {#each categories as category}
@@ -57,6 +78,7 @@
     <option value='low-to-high'>Price: Low to High</option>
     <option value='high-to-low'>Price: High to Low</option>
   </select>
+  </div>
   
   <div class="product-list">
     {#each filteredProducts as product}
