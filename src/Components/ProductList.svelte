@@ -36,12 +36,12 @@
   gap: 1rem;
 }
     .product-card {
-      border: 1px solid #090808;
+      border: 3px solid #090808;
       padding: 1rem;
       border-radius: 8px;
       cursor: pointer;
       width: 200px;
-      background-color: white;
+      background-color: grey;
     }
   </style>
   
